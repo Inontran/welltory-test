@@ -1,4 +1,4 @@
-@import '@/theme/variables.scss';
+@import '@/shared/theme/variables.scss';
 
 @function calc-rem($val-px) {
   $result: #{$val-px / $font-size-base + 'rem'};

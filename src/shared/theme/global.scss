@@ -1,5 +1,5 @@
 @import 'variables.scss';
-@import 'fonts/montserrat/montserrat.css';
+@import '@/shared/theme/fonts/steinbeck-reg.css';
 
 * {
   &,
@@ -10,7 +10,7 @@
 }
 
 html {
-  font-family: Montserrat, sans-serif;
+  font-family: Steinbeck, sans-serif;
   font-size: #{$font-size-base + 'px'};
   line-height: 1.7;
   min-height: 100vh;
