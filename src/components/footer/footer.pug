@@ -1,0 +1,20 @@
+//-
+  options.classes - Классы блока.
+  options.id - ИД блока.
+
+mixin footer(options = {})
+  -
+    const {
+      defaultClasses = '',
+      defaultId = false,
+    } = htmlWebpackPlugin.options.getData('components/footer/data.json');
+  -
+    const {
+      classes = defaultClasses,
+      id = defaultId,
+    } = options;
+
+  footer.footer.js-footer(
+    class = classes, 
+    id = id ? id : false
+  ) footer

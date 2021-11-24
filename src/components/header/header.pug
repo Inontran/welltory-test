@@ -1,0 +1,20 @@
+//-
+  options.classes - Классы блока.
+  options.id - ИД блока.
+
+mixin header(options = {})
+  -
+    const {
+      defaultClasses = '',
+      defaultId = false,
+    } = htmlWebpackPlugin.options.getData('components/header/data.json');
+  -
+    const {
+      classes = defaultClasses,
+      id = defaultId,
+    } = options;
+
+  header.header.js-header(
+    class = classes,
+    id = id ? id : false
+  ) header

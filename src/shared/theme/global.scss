@@ -14,4 +14,13 @@ html {
   font-size: #{$font-size-base + 'px'};
   line-height: 1.7;
   min-height: 100vh;
+  color: $white;
+}
+
+body {
+  background-color: $dark;
+  background-image: url(../images/background-page.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
