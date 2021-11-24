@@ -1,0 +1,17 @@
+@import 'variables.scss';
+@import 'fonts/montserrat/montserrat.css';
+
+* {
+  &,
+  &::after,
+  &::before {
+    box-sizing: border-box;
+  }
+}
+
+html {
+  font-family: Montserrat, sans-serif;
+  font-size: #{$font-size-base + 'px'};
+  line-height: 1.7;
+  min-height: 100vh;
+}

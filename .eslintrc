@@ -1,0 +1,29 @@
+{
+  "extends": [
+    // Базовый набор правил eslint
+    "eslint:recommended",
+    // Правила Airbnb
+    "airbnb-base"
+  ],
+  "rules": {
+    "max-len": [
+      "error",
+      {
+        "code": 120
+      }
+    ],
+    // добавил это исключение, так линтер не понимает алиесы webpack
+    "import/no-unresolved": 0,
+    "no-new": 1
+  },
+  "parserOptions": {
+    "sourceType": "module"
+  },
+  "plugins": [
+    
+  ],
+  "env": {
+    "browser": true,
+    "es6": true
+  }
+}

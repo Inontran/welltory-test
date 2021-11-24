@@ -1,0 +1,28 @@
+
+-
+  const {
+    title = '',
+    description = '',
+    keywords = '',
+  } = htmlWebpackPlugin.options.getData();
+
+doctype html
+html(lang='ru')
+  head
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    link(rel='mask-icon', color='#bc9cff', href=require('@/shared/images/logo-mini.png').default)
+    title #{title}
+    meta(name='description', content = description)
+    meta(name='keywords', content = keywords)
+  
+  body.page
+    div.page__content-wrapper.js-page__content-wrapper
+      header.header
+        #{header}
+
+      main.page__main
+        #{main}
+      
+      footer.footer 
+        #{footer}
