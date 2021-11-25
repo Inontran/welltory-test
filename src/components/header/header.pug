@@ -5,19 +5,15 @@
 mixin header(options = {})
   -
     const {
-      defaultClasses = '',
-      defaultId = false,
-    } = htmlWebpackPlugin.options.getData('components/header/data.json');
-  -
-    const {
       classes = defaultClasses,
       id = defaultId,
     } = options;
 
-  header.header.js-header(
+  header.header(
     class = classes,
     id = id ? id : false
   )
-    img.header__logo(
-      src = require('@/shared/images/logo.svg').default,
-    )
+    a.header__logo(href = '/') 
+      img.header__logo-img(
+        src = require('@/shared/images/logo.svg').default,
+      )

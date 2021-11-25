@@ -1,20 +1,85 @@
 //-
   options.classes - Классы блока.
   options.id - ИД блока.
+  options.appStoreLink - Ссылка на приложение в App Store.
+  options.googlePlay - Ссылка на приложение в Google Play.
+  options.twitter - Ссылка на Twitter.
+  options.facebook - Ссылка на Facebook.
+  options.instagram - Ссылка на Instagram.
+  options.linkedIn - Ссылка на LinkedIn.
+  options.privacyPolicy - Ссылка на политику конфинденциальности.
+  options.termsOfUse - Ссылка на правила сервиса.
 
 mixin footer(options = {})
   -
     const {
       defaultClasses = '',
       defaultId = false,
+      defaultAppStoreLink = '',
+      defaultGooglePlay = '',
+      defaultTwitter = '',
+      defaultFacebook = '',
+      defaultInstagram = '',
+      defaultLinkedIn = '',
+      defaultPrivacyPolicy = '',
+      defaultTermsOfUse = '',
     } = htmlWebpackPlugin.options.getData('components/footer/data.json');
   -
     const {
       classes = defaultClasses,
       id = defaultId,
+      appStoreLink = defaultAppStoreLink,
+      googlePlay = defaultGooglePlay,
+      twitter = defaultTwitter,
+      facebook = defaultFacebook,
+      instagram = defaultInstagram,
+      linkedIn = defaultLinkedIn,
+      privacyPolicy = defaultPrivacyPolicy,
+      termsOfUse = defaultTermsOfUse,
     } = options;
 
-  footer.footer.js-footer(
+  footer.footer(
     class = classes, 
     id = id ? id : false
-  ) footer
+  )
+    div.footer__container
+      if appStoreLink || googlePlay
+        div.footer__app-links
+          p.footer__app-text Get the mobile app
+          if appStoreLink
+            a.footer__app-store-link(href = '')
+              img.footer__app-store-icon(src = require('@/shared/images/app-store.svg').default)
+          if googlePlay
+            a.footer__google-play-link(href = '')
+              img.footer__google-play-icon(src = require('@/shared/images/google-play.svg').default)
+
+      if privacyPolicy || termsOfUse
+        div.footer__doc-links
+          if privacyPolicy
+            a.footer__doc-link(href = '') Terms of use
+          if privacyPolicy && termsOfUse
+            span.footer__doc-links-separator #{'|'}
+          if termsOfUse
+            a.footer__doc-link(href = '') Privacy policy
+      
+      div.footer__social-links
+        if twitter
+          a.footer__social-link(href = '')
+            img.footer__social-link-icon(
+              src = require('@/shared/images/twitter-icon.png').default
+            )
+        if facebook
+          a.footer__social-link(href = '')
+            img.footer__social-link-icon(
+              src = require('@/shared/images/facebook-icon.png').default
+            )
+        if instagram
+          a.footer__social-link(href = '')
+            img.footer__social-link-icon(
+              src = require('@/shared/images/insta-icon.png').default
+            )
+        if linkedIn
+          a.footer__social-link(href = '')
+            img.footer__social-link-icon(
+              src = require('@/shared/images/indigo-icon.png').default
+            )

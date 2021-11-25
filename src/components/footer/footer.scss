@@ -1,3 +1,119 @@
+@import '@/shared/theme/variables.scss';
+@import '@/shared/functions.scss';
+
 .footer {
+  width: 100%;
+  max-width: calc(1034px + 92px);
+  padding-top: 124px;
+  padding-bottom: 79px;
+  padding-left: 60px;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: calc-rem(16);
+  color: $white70;
+
+  @media(max-width: $lg) {
+    padding-left: 0;
+    padding-bottom: 133px;
+  }
+
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding-left: 16px;
+    padding-right: 16px;
+
+    @media(max-width: $md) {
+      flex-direction: column;
+    }
+  }
   
+  &__app-links {
+    display: inline-flex;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-left: -11px;
+    margin-right: -11px;
+
+    @media(max-width: $md) {
+      justify-content: center;
+      padding-bottom: 50px;
+    }
+  }
+
+  &__app-text {
+    margin-top: 0;
+    margin-bottom: 0;
+    line-height: 1.375;
+
+    @media(max-width: $md) {
+      text-align: center;
+      width: 100%;
+      padding-bottom: 18px;
+    }
+  }
+
+  &__app-store-link,
+  &__google-play-link {
+    display: inline-flex;
+  }
+
+  &__app-text,
+  &__app-store-link,
+  &__google-play-link {
+    margin-left: 11px;
+    margin-right: 11px;
+  }
+
+  &__app-store-icon,
+  &__google-play-icon {
+    flex: none;
+  }
+
+  &__doc-links {
+    display: inline-flex;
+    align-items: center;
+    margin-left: auto;
+    padding-left: 62px;
+    padding-right: 62px;
+    color: $white50;
+    line-height: 1.42;
+
+    @media(max-width: $md) {
+      padding-left: 0;
+      padding-right: 0;
+      margin-left: 0;
+      padding-bottom: 30px;
+    }
+
+    &-separator {
+      display: inline-block;
+      margin: 0 18px;
+    }
+  }
+
+  &__doc-link {
+    color: $white50;
+    text-decoration: none;
+  }
+
+  &__social-links {
+    display: inline-flex;
+    align-items: center;
+    margin-left: -10px;
+    margin-right: -10px;
+  }
+
+  &__social-link {
+    display: inline-flex;
+    margin-left: 10px;
+    margin-right: 10px;
+
+    &-icon {
+      opacity: 0.4;
+      flex: none;
+    }
+  }
 }
