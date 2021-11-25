@@ -10,9 +10,9 @@
 }
 
 html {
-  font-family: Steinbeck, sans-serif;
+  font-family: 'Steinbeck', sans-serif;
   font-size: #{$font-size-base + 'px'};
-  line-height: 1.7;
+  line-height: 1.33;
   min-height: 100vh;
   color: $white;
 }

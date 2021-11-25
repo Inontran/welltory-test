@@ -1,2 +1,16 @@
 @import '@/shared/theme/variables.scss';
 @import '@/shared/functions.scss';
+
+.page {
+  min-height: 100vh;
+
+  &__content-wrapper {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__main {
+    flex-grow: 1;
+  }
+}
