@@ -13,4 +13,26 @@
   &__main {
     flex-grow: 1;
   }
+
+  &__tariff-img-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+
+  &__tariff-img {
+    max-width: 100%;
+    flex: none;
+  }
+
+  &__heading{
+    
+    &_first {
+      text-align: center;
+      font-size: calc-rem(37);
+      font-weight: 400;
+      line-height: 1.08;
+      margin-bottom: 45px;
+    }
+  }
 }

@@ -12,6 +12,8 @@
 html {
   font-family: 'Steinbeck', sans-serif;
   font-size: #{$font-size-base + 'px'};
+  font-weight: 400;
+  font-style: normal;
   line-height: 1.33;
   min-height: 100vh;
   color: $white;

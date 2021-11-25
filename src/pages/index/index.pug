@@ -21,6 +21,15 @@ html(lang='ru')
     div.page__content-wrapper
       +header()
 
-      main.page__main #{'main'}
+      main.page__main
+        div.page__tariff-img-wrapper
+          img.page__tariff-img(
+            src = require('@/shared/images/logo-tariff.png').default,
+            alt = 'welltory pro'
+          )
+
+        h1.page__heading.page__heading_first Take better care of yourself every day
+
+        
       
       +footer()

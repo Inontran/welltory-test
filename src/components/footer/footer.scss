@@ -47,6 +47,7 @@
     margin-top: 0;
     margin-bottom: 0;
     line-height: 1.375;
+    font-weight: 400;
 
     @media(max-width: $md) {
       text-align: center;
@@ -95,6 +96,7 @@
   }
 
   &__doc-link {
+    font-weight: 400;
     color: $white50;
     text-decoration: none;
   }
