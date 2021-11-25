@@ -1,0 +1,19 @@
+@import '@/shared/theme/variables.scss';
+
+.header {
+  width: 100%;
+  max-width: 1320px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 22px 8px;
+
+  @media(max-width: $md){
+    padding: 9px 8px 15px;
+  }
+
+  &__logo {
+    @media(max-width: $md){
+      max-width: 121px;
+    }
+  }
+}

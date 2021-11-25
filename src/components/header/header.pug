@@ -17,4 +17,7 @@ mixin header(options = {})
   header.header.js-header(
     class = classes,
     id = id ? id : false
-  ) header
+  )
+    img.header__logo(
+      src = require('@/shared/images/logo.svg').default,
+    )
