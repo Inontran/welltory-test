@@ -1,6 +1,7 @@
 include ../../components/header/header
 include ../../components/footer/footer
 include ../../components/tariff-card/tariff-card
+include ../../components/button/button
 -
   const {
     title = '',
@@ -31,7 +32,7 @@ html(lang='ru')
 
         h1.page__heading.page__heading_first Take better care of yourself every day
 
-        section.page__choice-tariff
+        form(action="", method="post").page__choice-tariff
           div.page__choice-tariff-container
             div.page__tariff-card-wrapper
               +tariff-card({
@@ -50,5 +51,16 @@ html(lang='ru')
                 text: '$79 billed once a year',
                 checked: true,
               })
+          div.page__tariff-btn-wrapper
+            +button({
+              classes: 'button_with-gradient button_wide',
+              text: 'continue',
+              type: 'submit'
+            })
+          
+          
+      +button({
+        text: 'go with the free version',
+      })
       
       +footer()
