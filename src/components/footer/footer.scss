@@ -12,7 +12,7 @@
   font-size: calc-rem(16);
   color: $white70;
 
-  @media(max-width: $md) {
+  @media (max-width: $md) {
     padding-left: 0;
     padding-bottom: 133px;
   }
@@ -25,11 +25,11 @@
     padding-left: 16px;
     padding-right: 16px;
 
-    @media(max-width: $md) {
+    @media (max-width: $md) {
       flex-direction: column;
     }
   }
-  
+
   &__app-links {
     display: inline-flex;
     align-items: center;
@@ -37,7 +37,7 @@
     margin-left: -11px;
     margin-right: -11px;
 
-    @media(max-width: $md) {
+    @media (max-width: $md) {
       justify-content: center;
       padding-bottom: 50px;
     }
@@ -49,7 +49,7 @@
     line-height: 1.375;
     font-weight: 400;
 
-    @media(max-width: $md) {
+    @media (max-width: $md) {
       text-align: center;
       width: 100%;
       padding-bottom: 18px;
@@ -82,7 +82,7 @@
     color: $white50;
     line-height: 1.42;
 
-    @media(max-width: $md) {
+    @media (max-width: $md) {
       padding-left: 0;
       padding-right: 0;
       margin-left: 0;

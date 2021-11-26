@@ -1,9 +1,9 @@
 @font-face {
-	font-family: 'Steinbeck';
-	src: local('Steinbeck'), 
+  font-family: 'Steinbeck';
+  src:
+    local('Steinbeck'),
     url('./SteinbeckRegular.woff') format('woff');
-	font-weight: normal;
-	font-style: normal;
+  font-weight: normal;
+  font-style: normal;
   font-display: swap;
 }
-
