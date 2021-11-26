@@ -36,9 +36,21 @@ html(lang='ru')
         div.page__choice-tariff-wrapper
           +choice-tariff()
           
+        div.page__second-heading-wrapper
+          h2.page__heading.page__heading_second Choose the best plan for you
           
-      +button({
-        text: 'go with the free version',
-      })
+        div.page__choice-tariff-btns
+          div.page__tariff-btn-wrapper
+            +button({
+              href: '/',
+              classes: 'button_wide',
+              text: 'go with the free version',
+            })
+          div.page__tariff-btn-wrapper
+            +button({
+              href: '/',
+              classes: 'button_wide button_with-gradient',
+              text: 'upgrade now',
+            })
       
       +footer()
