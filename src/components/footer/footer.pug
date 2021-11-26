@@ -47,39 +47,39 @@ mixin footer(options = {})
         div.footer__app-links
           p.footer__app-text Get the mobile app
           if appStoreLink
-            a.footer__app-store-link(href = '')
+            a.footer__app-store-link(href = appStoreLink)
               img.footer__app-store-icon(src = require('@/shared/images/app-store.svg').default)
           if googlePlay
-            a.footer__google-play-link(href = '')
+            a.footer__google-play-link(href = googlePlay)
               img.footer__google-play-icon(src = require('@/shared/images/google-play.svg').default)
 
       if privacyPolicy || termsOfUse
         div.footer__doc-links
           if privacyPolicy
-            a.footer__doc-link(href = '') Terms of use
+            a.footer__doc-link(href = privacyPolicy) Terms of use
           if privacyPolicy && termsOfUse
             span.footer__doc-links-separator #{'|'}
           if termsOfUse
-            a.footer__doc-link(href = '') Privacy policy
+            a.footer__doc-link(href = termsOfUse) Privacy policy
       
       div.footer__social-links
         if twitter
-          a.footer__social-link(href = '')
+          a.footer__social-link(href = twitter)
             img.footer__social-link-icon(
               src = require('@/shared/images/twitter-icon.png').default
             )
         if facebook
-          a.footer__social-link(href = '')
+          a.footer__social-link(href = facebook)
             img.footer__social-link-icon(
               src = require('@/shared/images/facebook-icon.png').default
             )
         if instagram
-          a.footer__social-link(href = '')
+          a.footer__social-link(href = instagram)
             img.footer__social-link-icon(
               src = require('@/shared/images/insta-icon.png').default
             )
         if linkedIn
-          a.footer__social-link(href = '')
+          a.footer__social-link(href = linkedIn)
             img.footer__social-link-icon(
               src = require('@/shared/images/indigo-icon.png').default
             )
