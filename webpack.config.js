@@ -109,7 +109,7 @@ const imagesLoaders = [
   {
     loader: 'file-loader',
     options: {
-      name: 'images/[path][name].[hash].[ext]'
+      name: 'images/[name].[hash].[ext]'
     }
   }
 ];
