@@ -10,6 +10,7 @@ include ../../components/list/list
     keywords = '',
     firstList = [],
     secondList = [],
+    tariffCards = []
   } = htmlWebpackPlugin.options.getData();
 
 doctype html
@@ -37,7 +38,9 @@ html(lang='ru')
           h1.page__heading.page__heading_first Take better care of yourself every day
 
         div.page__choice-tariff-wrapper
-          +choice-tariff()
+          +choice-tariff({
+            dataTariffCards: tariffCards,
+          })
           
         div.page__second-heading-wrapper
           h2.page__heading.page__heading_second Choose the best plan for you

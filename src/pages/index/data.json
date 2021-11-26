@@ -1,5 +1,22 @@
 {
   "title": "Welltory",
+  "tariffCards": [
+    {
+      "discount": "-15%",
+      "tariffName": "Monthly",
+      "price": "$ 5.99",
+      "oldPrice": "$ 7.99",
+      "text": "Billed every month"
+    },
+    {
+      "discount": "-25%",
+      "tariffName": "Annual",
+      "price": "$ 4.59",
+      "oldPrice": "$ 7.99",
+      "text": "$79 billed once a year",
+      "checked": true
+    }
+  ],
   "firstList": [
     {
       "text": "Personalized research papers: see how your lifestyle affects your health and what you can do about it",

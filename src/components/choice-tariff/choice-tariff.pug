@@ -14,6 +14,7 @@ mixin choice-tariff(options = {})
     const {
       classes = '',
       id = false,
+      dataTariffCards = [],
     } = options;
 
   form.choice-tariff.js-choice-tariff(
@@ -23,25 +24,9 @@ mixin choice-tariff(options = {})
     method = 'post',
   )
     div.choice-tariff__container
-      div.choice-tariff__card-wrapper
-        +tariff-card({
-          discount: '-15%',
-          tariffName: 'Monthly',
-          price: '$ 5.99',
-          oldPrice: '$ 7.99',
-          text: 'Billed every month',
-          inputValue: 1,
-        })
-      div.choice-tariff__card-wrapper
-        +tariff-card({
-          discount: '-25%',
-          tariffName: 'Annual',
-          price: '$ 4.59',
-          oldPrice: '$ 7.99',
-          text: '$79 billed once a year',
-          inputValue: 2,
-          checked: true,
-        })
+      each dataCard in dataTariffCards
+        div.choice-tariff__card-wrapper
+          +tariff-card(dataCard)
     div.choice-tariff__btn-wrapper
       +button({
         classes: 'button_with-gradient button_wide',

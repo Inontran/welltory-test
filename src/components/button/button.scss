@@ -12,6 +12,11 @@
   background: none;
   cursor: pointer;
   text-decoration: none;
+  transition: transform .3s;
+
+  &:hover {
+    transform: scale(1.05);
+  }
   
   &__text {
     font-size: calc-rem(19);
