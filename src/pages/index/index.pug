@@ -1,7 +1,7 @@
 include ../../components/header/header
 include ../../components/footer/footer
-include ../../components/tariff-card/tariff-card
 include ../../components/button/button
+include ../../components/choice-tariff/choice-tariff
 -
   const {
     title = '',
@@ -30,33 +30,11 @@ html(lang='ru')
             alt = 'welltory pro'
           )
 
-        h1.page__heading.page__heading_first Take better care of yourself every day
+        div.page__first-heading-wrapper
+          h1.page__heading.page__heading_first Take better care of yourself every day
 
-        form(action="", method="post").page__choice-tariff
-          div.page__choice-tariff-container
-            div.page__tariff-card-wrapper
-              +tariff-card({
-                discount: '-15%',
-                tariffName: 'Monthly',
-                price: '$ 5.99',
-                oldPrice: '$ 7.99',
-                text: 'Billed every month',
-              })
-            div.page__tariff-card-wrapper
-              +tariff-card({
-                discount: '-25%',
-                tariffName: 'Annual',
-                price: '$ 4.59',
-                oldPrice: '$ 7.99',
-                text: '$79 billed once a year',
-                checked: true,
-              })
-          div.page__tariff-btn-wrapper
-            +button({
-              classes: 'button_with-gradient button_wide',
-              text: 'continue',
-              type: 'submit'
-            })
+        div.page__choice-tariff-wrapper
+          +choice-tariff()
           
           
       +button({

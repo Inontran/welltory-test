@@ -13,15 +13,18 @@ mixin tariff-card(options = {})
       price = false,
       oldPrice = false,
       text = false,
+      inputName = 'choice-tariff',
+      inputValue = false,
     } = options;
 
-  label.tariff-card(
+  label.tariff-card.js-tariff-card(
     class = classes,
     id = id ? id : false
   )
-    input.tariff-card__input(
+    input.tariff-card__input.js-tariff-card__input(
       type = 'radio',
-      name = 'choice-tariff',
+      name = inputName,
+      value = inputValue ? inputValue : false,
       checked = checked ? 'checked' : false,
     )
     span.tariff-card__wrapper
