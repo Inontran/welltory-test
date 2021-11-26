@@ -1,0 +1,41 @@
+//-
+  options.classes - Классы блока.
+  options.id - ИД блока.
+
+mixin tariff-card(options = {})
+  -
+    const {
+      classes = '',
+      id = '',
+      checked = false,
+      discount = false,
+      tariffName = false,
+      price = false,
+      oldPrice = false,
+      text = false,
+    } = options;
+
+  label.tariff-card(
+    class = classes,
+    id = id ? id : false
+  )
+    input.tariff-card__input(
+      type = 'radio',
+      name = 'choice-tariff',
+      checked = checked ? 'checked' : false,
+    )
+    span.tariff-card__wrapper
+      if discount
+        span.tariff-card__discount #{discount}
+      span.tariff-card__info-wrapper
+        span.tariff-card__text-col
+          if tariffName
+            span.tariff-card__name #{tariffName}
+          if text
+            span.tariff-card__text #{text}
+
+        span.tariff-card__price-col
+          if price
+            span.tariff-card__price #{price}
+          if oldPrice
+            span.tariff-card__old-price #{oldPrice}

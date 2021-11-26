@@ -1,5 +1,6 @@
 include ../../components/header/header
 include ../../components/footer/footer
+include ../../components/tariff-card/tariff-card
 -
   const {
     title = '',
@@ -30,6 +31,24 @@ html(lang='ru')
 
         h1.page__heading.page__heading_first Take better care of yourself every day
 
-        
+        section.page__choice-tariff
+          div.page__choice-tariff-container
+            div.page__tariff-card-wrapper
+              +tariff-card({
+                discount: '-15%',
+                tariffName: 'Monthly',
+                price: '$ 5.99',
+                oldPrice: '$ 7.99',
+                text: 'Billed every month',
+              })
+            div.page__tariff-card-wrapper
+              +tariff-card({
+                discount: '-25%',
+                tariffName: 'Annual',
+                price: '$ 4.59',
+                oldPrice: '$ 7.99',
+                text: '$79 billed once a year',
+                checked: true,
+              })
       
       +footer()

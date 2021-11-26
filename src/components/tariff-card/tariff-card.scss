@@ -1,0 +1,163 @@
+@import '@/shared/theme/variables.scss';
+@import '@/shared/functions.scss';
+
+.tariff-card {
+  $animate-time: .3s;
+
+  display: block;
+  cursor: pointer;
+
+  &__wrapper {
+    position: relative;
+    display: block;
+    
+    &,
+    &::after {
+      border-radius: 4px;
+      background: $darkgray2;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 1px;
+      left: 1px;
+      width: calc(100% - 2px);
+      height: calc(100% - 2px);
+    }
+  }
+
+  &__discount {
+    position: absolute;
+    top: -6px;
+    left: 28px;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 98px;
+    min-height: 38px;
+    border-radius: 0 3px 3px 3px;
+    background-color: $purple;
+    color: $white;
+    font-size: calc-rem(19);
+    letter-spacing: .02em;
+    text-align: center;
+    transition: background-color $animate-time,
+                color $animate-time;
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 100%;
+      width: 0; 
+      height: 0;
+      border-bottom: 6px solid $purple;
+      border-left: 6px solid transparent;
+      opacity: .4;
+      transition: border $animate-time;
+    }
+  }
+
+  &__info-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    z-index: 1;
+    padding: 52px 32px 26px;
+    min-height: 190px;
+
+    @media(max-width: $sm) {
+      min-height: auto;
+    }
+  }
+
+  &__text-col {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+  }
+
+  &__price-col {
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__discount,
+  &__name,
+  &__text,
+  &__price,
+  &__old-price {
+    font-weight: 400;
+    font-style: normal;
+  }
+
+  &__name {
+    font-size: calc-rem(22);
+    line-height: 1.136;
+    letter-spacing: .02em;
+  }
+
+  &__price {
+    font-size: calc-rem(22);
+    line-height: 1.4545;
+    letter-spacing: .02em;
+    color: $purple;
+    transition: color $animate-time;
+  }
+
+  &__old-price {
+    font-size: calc-rem(16);
+    line-height: 1.5625;
+    letter-spacing: .02em;
+    text-decoration-line: line-through;
+    opacity: .5;
+    color: $gray6;
+  }
+
+  &__text {
+    font-size: calc-rem(12);
+    line-height: 1.5;
+    letter-spacing: .01em;
+    opacity: 0.5;
+    margin-top: auto;
+    transition: opacity $animate-time;
+
+    @media(max-width: $sm) {
+      padding-bottom: 5px;
+    }
+  }
+  
+  &__input {
+    display: none;
+
+    &:checked {
+      & ~ .tariff-card__wrapper {
+        background: $blue-orange;
+
+        .tariff-card__discount {
+          color: $dark;
+          background-color: $cardio;
+
+          &::after {
+            border-bottom-color: $cardio;
+          }
+        }
+
+        .tariff-card__info-wrapper {
+          .tariff-card__price {
+            color: $cardio;
+          }
+          
+          .tariff-card__text {
+            opacity: 1;
+          }
+        }
+      }
+
+    }
+  }
+  
+}
