@@ -1,0 +1,45 @@
+//-
+  options.classes - Классы блока.
+  options.id - ИД блока.
+
+mixin list(options = {})
+  -
+    const {
+      classes = '',
+      id = false,
+      items = [],
+    } = options;
+
+  ul.list(
+    class = classes,
+    id = id ? id : false,
+  )
+    each item in items
+      li.list__item
+        span.list__text #{item.text}
+        span.list__icon-wrapper
+          if item.forFree
+            img.list__icon(
+              src = require('@/shared/images/check.svg').default,
+              alt = 'The service is included in this tariff',
+              title = 'The service is included in this tariff',
+            )
+          else
+            img.list__icon(
+              src = require('@/shared/images/minus.svg').default,
+              alt = 'The service is not included in this tariff',
+              title = 'The service is not included in this tariff',
+            )
+        span.list__icon-wrapper
+          if item.inPro
+            img.list__icon(
+              src = require('@/shared/images/check.svg').default,
+              alt = 'The service is included in this tariff',
+              title = 'The service is included in this tariff',
+            )
+          else
+            img.list__icon(
+              src = require('@/shared/images/minus.svg').default,
+              alt = 'The service is not included in this tariff',
+              title = 'The service is not included in this tariff',
+            )

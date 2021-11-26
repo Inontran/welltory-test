@@ -1,3 +1,62 @@
 {
-  "title": "Welltory"
+  "title": "Welltory",
+  "firstList": [
+    {
+      "text": "Personalized research papers: see how your lifestyle affects your health and what you can do about it",
+      "forFree": false,
+      "inPro": true
+    },
+    {
+      "text": "Recommendations: get science-backed tips to beat insomnia, cure a hangover, support a panic attack, clear a headache, or get blood pressure under control",
+      "forFree": false,
+      "inPro": true
+    },
+    {
+      "text": "Personalized move goals: your heartbeat and daily steps data will steer you toward better health — effortlessly",
+      "forFree": false,
+      "inPro": true
+    },
+    {
+      "text": "Breathing practices: focus or unwind with scientifically-proven guided practices",
+      "forFree": true,
+      "inPro": true
+    },
+    {
+      "text": "Yesterday's move report: see if you’re doing enough to support your health",
+      "forFree": true,
+      "inPro": true
+    }
+  ],
+  "secondList": [
+    {
+      "text": "Detailed heartbeat analytics: access stress, energy, and focus scores, metrics and charts — check in on how your body is doing and spot any changes",
+      "forFree": false,
+      "inPro": true
+    },
+    {
+      "text": "In-depth blood pressure analysis: enter your numbers, and we’ll provide five extra indexes, give detailed interpretations, and alert you if something doesn’t look right",
+      "forFree": false,
+      "inPro": true
+    },
+    {
+      "text": "Blood pressure reports: send your data to your doctor or print out neat reports with all of your readings",
+      "forFree": false,
+      "inPro": true
+    },
+    {
+      "text": "Basic heartbeat analytics: just your stress, energy, and focus scores — no extra metrics",
+      "forFree": true,
+      "inPro": true
+    },
+    {
+      "text": "Basic blood pressure analysis: we’ll interpret your top and bottom numbers — without extra indexes",
+      "forFree": true,
+      "inPro": true
+    },
+    {
+      "text": "Yesterday’s heart report sent to your feed daily: note the relationship between your activities and any changes to your heart rate",
+      "forFree": true,
+      "inPro": true
+    }
+  ]
 }

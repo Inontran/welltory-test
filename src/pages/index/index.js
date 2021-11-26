@@ -5,5 +5,6 @@ import '@/components/header/header';
 import '@/components/footer/footer';
 import '@/components/choice-tariff/choice-tariff';
 import '@/components/button/button';
+import '@/components/list/list';
 
 import './index.scss';

@@ -2,11 +2,14 @@ include ../../components/header/header
 include ../../components/footer/footer
 include ../../components/button/button
 include ../../components/choice-tariff/choice-tariff
+include ../../components/list/list
 -
   const {
     title = '',
     description = '',
     keywords = '',
+    firstList = [],
+    secondList = [],
   } = htmlWebpackPlugin.options.getData();
 
 doctype html
@@ -38,6 +41,32 @@ html(lang='ru')
           
         div.page__second-heading-wrapper
           h2.page__heading.page__heading_second Choose the best plan for you
+
+        div.page__list-heading-wrapper
+          div.page__list-heading
+            span.page__list-heading-text What you get
+            span.page__name-tariff 
+              span.page__name-tariff_desktop for 
+              span Free
+            span.page__name-tariff.page__name-tariff_type_pro 
+              span.page__name-tariff_desktop in 
+              span Pro
+
+        div.page__third-heading-wrapper
+          h3.page__heading.page__heading_third Feel better fast
+
+        div.page__list-wrapper.page__list-wrapper_first
+          +list({
+            items: firstList,
+          })
+
+        div.page__fourth-heading-wrapper
+          h3.page__heading.page__heading_third Gain rich health insights
+
+        div.page__list-wrapper.page__list-wrapper_second
+          +list({
+            items: secondList,
+          })
           
         div.page__choice-tariff-btns
           div.page__tariff-btn-wrapper

@@ -49,8 +49,22 @@
     margin-bottom: 50px;
   }
 
+  &__third-heading-wrapper {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-bottom: 26px;
+  }
+
+  &__fourth-heading-wrapper {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-bottom: 34px;
+  }
+
   &__heading{
-    
+    margin-top: 0;
+    margin-bottom: 0;
+
     &_first {
       text-align: center;
       font-size: calc-rem(37);
@@ -69,6 +83,21 @@
       font-weight: 400;
       line-height: 1.136;
       letter-spacing: .02em;
+    }
+
+    &_third {
+      text-align: center;
+      font-size: calc-rem(22);
+      font-weight: 400;
+      line-height: 1.136;
+      letter-spacing: .02em;
+      border-image-slice: 1;
+      background: $blue-orange;
+      background-clip: border-box;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      mix-blend-mode: normal;
+      text-shadow: 0 13.2985px 26.5969px rgba(255,0,63,.2);
     }
   }
 
@@ -99,6 +128,95 @@
 
     @media(max-width: $sm) {
       flex: 1 1 100%;
+    }
+  }
+
+  &__list-heading-wrapper,
+  &__list-wrapper {
+    max-width: 691px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 15px;
+    padding-right: 17px;
+  }
+
+  &__list-wrapper {
+
+    &_first {
+      padding-bottom: 46px;
+    }
+
+    &_second {
+      padding-bottom: 59px;
+    }
+  }
+
+  &__list-heading {
+    display: flex;
+    list-style: none;
+    margin-bottom: 45px;
+
+    @media(max-width: $sm) {
+      margin-bottom: 35px;
+    }
+  }
+  
+  &__list-heading-text,
+  &__name-tariff {
+    display: inline-block;
+    font-size: calc-rem(22);
+    line-height: 1.136;
+    letter-spacing: .02em;
+    margin-left: 10px;
+    margin-right: 10px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid $white70;
+
+    @media(max-width: $sm) {
+      margin-left: 8px;
+      margin-right: 8px;
+    }
+  }
+
+  &__list-heading-text {
+    flex-grow: 1;
+    font-weight: 400;
+  }
+
+  &__name-tariff {
+    text-align: center;
+    flex: 0 1 123px;
+    min-width: 123px;
+
+    @media(max-width: $sm) {
+      flex: 0 1 56px;
+      min-width: 56px;
+    }
+
+    &_type_pro {
+      position: relative;
+      border-image-slice: 1;
+      background: $blue-orange;
+      background-clip: border-box;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      mix-blend-mode: normal;
+
+      &::after {
+        content: '';
+        position: absolute;
+        bottom: -2px;
+        left: 0;
+        width: 100%;
+        height: 4px;
+        background: $blue-orange;
+      }
+    }
+
+    &_desktop {
+      @media(max-width: $sm) {
+        display: none;
+      }
     }
   }
 }
