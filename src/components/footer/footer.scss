@@ -12,7 +12,7 @@
   font-size: calc-rem(16);
   color: $white70;
 
-  @media(max-width: $lg) {
+  @media(max-width: $md) {
     padding-left: 0;
     padding-bottom: 133px;
   }

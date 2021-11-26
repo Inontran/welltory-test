@@ -12,12 +12,20 @@
 
   &__main {
     flex-grow: 1;
+
+    @media(max-width: $sm) {
+      padding-top: 27px;
+    }
   }
 
   &__tariff-img-wrapper {
     display: flex;
     justify-content: center;
     margin-bottom: 20px;
+
+    @media(max-width: $sm) {
+      display: none;
+    }
   }
 
   &__tariff-img {
@@ -33,13 +41,21 @@
       font-weight: 400;
       line-height: 1.08;
       margin-bottom: 45px;
+
+      @media(max-width: $sm) {
+        font-size: calc-rem(27);
+        line-height: 1.185;
+        margin-bottom: 40px;
+      }
     }
   }
 
   &__choice-tariff {
     width: 100%;
-    max-width: 693px;
+    max-width: 731px;
     margin: 0 auto;
+    padding-left: 19px;
+    padding-right: 19px;
   }
 
   &__choice-tariff-container {
